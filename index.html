@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHGL</title>
+    <style>
+        .phgl{
+            height: 240px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+        }
+        .phgl:hover{
+            filter: contrast(120%);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">PHGL</h1>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:8px;">
+        <!-- class="phgl" and phgl-image="path/to/img" is required -->
+        <!-- Below images are examples, from Wikipedia -->
+        <div class="phgl" phgl-image="https://upload.wikimedia.org/wikipedia/commons/5/57/Bob_Moog3.jpg" title="Robert Moog in the 1970s"></div>
+        <div class="phgl" phgl-image="https://upload.wikimedia.org/wikipedia/commons/5/50/California_Arena_Point_fern.jpg" title="California Arena Point fern"></div>
+        <div class="phgl" phgl-image="https://upload.wikimedia.org/wikipedia/commons/f/f8/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg" title="View of Mount Fuji from Ōwakudani"></div>
+    </div>
+    <script src="./phgl.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>{
+            // Initialize
+            new Phgl();
+        });
+    </script>
+</body>
+</html>
